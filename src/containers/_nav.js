@@ -14,27 +14,33 @@ export default [
       },
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Theme']
+        _children: ['Rule Components']
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Colors',
+        name: 'Sites',
         to: '/theme/colors',
         icon: 'cil-drop'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Typography',
+        name: 'KeywordSet',
+        to: '/theme/typography',
+        icon: 'cil-pencil'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Schedulers',
         to: '/theme/typography',
         icon: 'cil-pencil'
       },
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Components']
+        _children: ['Rules']
       },
       {
         _name: 'CSidebarNavDropdown',
-        name: 'Base',
+        name: 'Rules',
         route: '/base',
         icon: 'cil-puzzle',
         items: [
