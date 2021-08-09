@@ -37,7 +37,7 @@ export default {
       type: Array,
       default () {
         // return ['username', 'registered', 'role', 'status']
-        return ['sitename', 'url']
+        return ['rulename', 'sitename', 'keywordname', 'schedulername', 'run']
       }
     },
     caption: {

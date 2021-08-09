@@ -14,187 +14,187 @@ export default [
       },
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Rule Components']
+        _children: ['Main']
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Sites',
-        to: '/theme/colors',
+        name: 'History',
+        to: '/theme/history',
         icon: 'cil-drop'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'KeywordSet',
-        to: '/theme/typography',
+        name: 'Run',
+        to: '/theme/run',
         icon: 'cil-pencil'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Schedulers',
-        to: '/theme/typography',
+        name: 'Rules',
+        to: '/theme/rules',
         icon: 'cil-pencil'
       },
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Rules']
+        _children: ['Scraper']
       },
       {
         _name: 'CSidebarNavDropdown',
-        name: 'Rules',
+        name: 'Rule components',
         route: '/base',
         icon: 'cil-puzzle',
         items: [
           {
-            name: 'Breadcrumbs',
-            to: '/base/breadcrumbs'
+            name: 'Sites',
+            to: '/base/sites'
           },
           {
-            name: 'Cards',
-            to: '/base/cards'
+            name: 'Keywords',
+            to: '/base/keywords'
           },
           {
-            name: 'Carousels',
-            to: '/base/carousels'
-          }, 
-          {
-            name: 'Collapses',
-            to: '/base/collapses'
+            name: 'Schedulers',
+            to: '/base/schedulers'
           },
-          {
-            name: 'Forms',
-            to: '/base/forms'
-          },
-          {
-            name: 'Jumbotrons',
-            to: '/base/jumbotrons'
-          },
-          {
-            name: 'List Groups',
-            to: '/base/list-groups'
-          },
-          {
-            name: 'Navs',
-            to: '/base/navs'
-          },
-          {
-            name: 'Navbars',
-            to: '/base/navbars'
-          },
-          {
-            name: 'Paginations',
-            to: '/base/paginations'
-          },
-          {
-            name: 'Popovers',
-            to: '/base/popovers'
-          },
-          {
-            name: 'Progress Bars',
-            to: '/base/progress-bars'
-          },
-          {
-            name: 'Switches',
-            to: '/base/switches'
-          },
-          {
-            name: 'Tables',
-            to: '/base/tables'
-          },
-          {
-            name: 'Tabs',
-            to: '/base/tabs'
-          },
-          {
-            name: 'Tooltips',
-            to: '/base/tooltips'
-          }
+          // {
+          //   name: 'Collapses',
+          //   to: '/base/collapses'
+          // },
+          // {
+          //   name: 'Forms',
+          //   to: '/base/forms'
+          // },
+          // {
+          //   name: 'Jumbotrons',
+          //   to: '/base/jumbotrons'
+          // },
+          // {
+          //   name: 'List Groups',
+          //   to: '/base/list-groups'
+          // },
+          // {
+          //   name: 'Navs',
+          //   to: '/base/navs'
+          // },
+          // {
+          //   name: 'Navbars',
+          //   to: '/base/navbars'
+          // },
+          // {
+          //   name: 'Paginations',
+          //   to: '/base/paginations'
+          // },
+          // {
+          //   name: 'Popovers',
+          //   to: '/base/popovers'
+          // },
+          // {
+          //   name: 'Progress Bars',
+          //   to: '/base/progress-bars'
+          // },
+          // {
+          //   name: 'Switches',
+          //   to: '/base/switches'
+          // },
+          // {
+          //   name: 'Tables',
+          //   to: '/base/tables'
+          // },
+          // {
+          //   name: 'Tabs',
+          //   to: '/base/tabs'
+          // },
+          // {
+          //   name: 'Tooltips',
+          //   to: '/base/tooltips'
+          // }
         ]
       },
-      {
-        _name: 'CSidebarNavDropdown',
-        name: 'Buttons',
-        route: '/buttons',
-        icon: 'cil-cursor',
-        items: [
-          {
-            name: 'Buttons',
-            to: '/buttons/standard-buttons'
-          },
-          {
-            name: 'Button Dropdowns',
-            to: '/buttons/dropdowns'
-          },
-          {
-            name: 'Button Groups',
-            to: '/buttons/button-groups'
-          },
-          {
-            name: 'Brand Buttons',
-            to: '/buttons/brand-buttons'
-          }
-        ]
-      },
+      // {
+      //   _name: 'CSidebarNavDropdown',
+      //   name: 'Buttons',
+      //   route: '/buttons',
+      //   icon: 'cil-cursor',
+      //   items: [
+      //     {
+      //       name: 'Buttons',
+      //       to: '/buttons/standard-buttons'
+      //     },
+      //     {
+      //       name: 'Button Dropdowns',
+      //       to: '/buttons/dropdowns'
+      //     },
+      //     {
+      //       name: 'Button Groups',
+      //       to: '/buttons/button-groups'
+      //     },
+      //     {
+      //       name: 'Brand Buttons',
+      //       to: '/buttons/brand-buttons'
+      //     }
+      //   ]
+      // },
       {
         _name: 'CSidebarNavItem',
         name: 'Charts',
         to: '/charts',
         icon: 'cil-chart-pie'
       },
-      {
-        _name: 'CSidebarNavDropdown',
-        name: 'Icons',
-        route: '/icons',
-        icon: 'cil-star',
-        items: [
-          {
-            name: 'CoreUI Icons',
-            to: '/icons/coreui-icons',
-            badge: {
-              color: 'info',
-              text: 'NEW'
-            }
-          },
-          {
-            name: 'Brands',
-            to: '/icons/brands'
-          },
-          {
-            name: 'Flags',
-            to: '/icons/flags'
-          }
-        ]
-      },
-      {
-        _name: 'CSidebarNavDropdown',
-        name: 'Notifications',
-        route: '/notifications',
-        icon: 'cil-bell',
-        items: [
-          {
-            name: 'Alerts',
-            to: '/notifications/alerts'
-          },
-          {
-            name: 'Badges',
-            to: '/notifications/badges'
-          },
-          {
-            name: 'Modals',
-            to: '/notifications/modals'
-          }
-        ]
-      },
-      {
-        _name: 'CSidebarNavItem',
-        name: 'Widgets',
-        to: '/widgets',
-        icon: 'cil-calculator',
-        badge: {
-          color: 'primary',
-          text: 'NEW',
-          shape: 'pill'
-        }
-      },
+      // {
+      //   _name: 'CSidebarNavDropdown',
+      //   name: 'Icons',
+      //   route: '/icons',
+      //   icon: 'cil-star',
+      //   items: [
+      //     {
+      //       name: 'CoreUI Icons',
+      //       to: '/icons/coreui-icons',
+      //       badge: {
+      //         color: 'info',
+      //         text: 'NEW'
+      //       }
+      //     },
+      //     {
+      //       name: 'Brands',
+      //       to: '/icons/brands'
+      //     },
+      //     {
+      //       name: 'Flags',
+      //       to: '/icons/flags'
+      //     }
+      //   ]
+      // },
+      // {
+      //   _name: 'CSidebarNavDropdown',
+      //   name: 'Notifications',
+      //   route: '/notifications',
+      //   icon: 'cil-bell',
+      //   items: [
+      //     {
+      //       name: 'Alerts',
+      //       to: '/notifications/alerts'
+      //     },
+      //     {
+      //       name: 'Badges',
+      //       to: '/notifications/badges'
+      //     },
+      //     {
+      //       name: 'Modals',
+      //       to: '/notifications/modals'
+      //     }
+      //   ]
+      // },
+      // {
+      //   _name: 'CSidebarNavItem',
+      //   name: 'Widgets',
+      //   to: '/widgets',
+      //   icon: 'cil-calculator',
+      //   badge: {
+      //     color: 'primary',
+      //     text: 'NEW',
+      //     shape: 'pill'
+      //   }
+      // },
       {
         _name: 'CSidebarNavDivider',
         _class: 'm-2'

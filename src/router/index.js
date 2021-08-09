@@ -10,6 +10,13 @@ const Dashboard = () => import('@/views/Dashboard')
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
 
+const History = () => import('@/views/theme/History')
+const Run = () => import('@/views/theme/Run')
+const Rules = () => import('@/views/theme/Rules')
+const Sites = () => import('@/views/base/Sites')
+const Keywords = () => import('@/views/base/Keywords')
+const Schedulers = () => import('@/views/base/Schedulers')
+
 const Charts = () => import('@/views/charts/Charts')
 const Widgets = () => import('@/views/widgets/Widgets')
 
@@ -82,7 +89,7 @@ function configRoutes () {
         {
           path: 'theme',
           redirect: '/theme/colors',
-          name: 'Theme',
+          name: 'Main',
           component: {
             render (c) { return c('router-view') }
           },
@@ -91,6 +98,21 @@ function configRoutes () {
               path: 'colors',
               name: 'Colors',
               component: Colors
+            },
+            {
+              path: 'history',
+              name: 'History',
+              component: History
+            },
+            {
+              path: 'run',
+              name: 'Run',
+              component: Run
+            },
+            {
+              path: 'rules',
+              name: 'Rules',
+              component: Rules
             },
             {
               path: 'typography',
@@ -138,7 +160,7 @@ function configRoutes () {
         {
           path: 'base',
           redirect: '/base/cards',
-          name: 'Base',
+          name: 'Rule Components',
           component: {
             render (c) { return c('router-view') }
           },
@@ -147,6 +169,21 @@ function configRoutes () {
               path: 'cards',
               name: 'Cards',
               component: Cards
+            },
+            {
+              path: 'sites',
+              name: 'Sites',
+              component: Sites
+            },
+            {
+              path: 'keywords',
+              name: 'Keywords',
+              component: Keywords
+            },
+            {
+              path: 'schedulers',
+              name: 'Schedulers',
+              component: Schedulers
             },
             {
               path: 'forms',
