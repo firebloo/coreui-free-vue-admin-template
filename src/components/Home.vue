@@ -12,7 +12,7 @@
     </div>
 </template>
 <script>
-import UserInfoStore from './theme/user-info-store';
+import UserInfoStore from '../app/user-info-store';
 export default {
     name: 'Home',
     data: function() {

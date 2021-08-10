@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/Home'
-import auth from '@/views/theme/auth';
-import LogoutSuccess from '@/views/LogoutSuccess';
-import UserInfoStore from '@/views/theme/user-info-store';
-import UserInfoApi from '@/views/theme/user-info-api';
-import ErrorComponent from '@/views/Error';
+import Home from '@/components/Home'
+import auth from '../app/auth';
+import LogoutSuccess from '@/components/LogoutSuccess';
+import UserInfoStore from '../app/user-info-store';
+import UserInfoApi from '../app/user-info-api';
+import ErrorComponent from '@/components/Error';
 
 // Containers
 const TheContainer = () => import('@/containers/TheContainer')
