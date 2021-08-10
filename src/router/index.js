@@ -1,5 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Home from '@/views/Home'
+import auth from '@/views/theme/auth';
+import LogoutSuccess from '@/views/LogoutSuccess';
+import UserInfoStore from '@/views/theme/user-info-store';
+import UserInfoApi from '@/views/theme/user-info-api';
+import ErrorComponent from '@/views/Error';
 
 // Containers
 const TheContainer = () => import('@/containers/TheContainer')
@@ -13,7 +19,7 @@ const Typography = () => import('@/views/theme/Typography')
 const History = () => import('@/views/theme/History')
 const Run = () => import('@/views/theme/Run')
 const Rules = () => import('@/views/theme/Rules')
-const cognitologin = () => import('@/views/theme/Login')
+// const cognitologin = () => import('@/views/theme/Login')
 const Sites = () => import('@/views/base/Sites')
 const Keywords = () => import('@/views/base/Keywords')
 const Schedulers = () => import('@/views/base/Schedulers')
@@ -67,12 +73,67 @@ const User = () => import('@/views/users/User')
 
 Vue.use(Router)
 
-export default new Router({
+export default new Router([{
   mode: 'hash', // https://router.vuejs.org/api/#mode
   linkActiveClass: 'active',
   scrollBehavior: () => ({ y: 0 }),
   routes: configRoutes()
-})
+},
+    {
+  mode: 'history',
+  base: '/',
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home,
+      beforeEnter: requireAuth
+    },
+    {
+      path: '/login', beforeEnter(to, from, next){
+        auth.auth.getSession();
+      }
+    },
+    {
+      path: '/login/oauth2/code/cognito', beforeEnter(to, from, next){
+        var currUrl = window.location.href;
+
+        //console.log(currUrl);
+        auth.auth.parseCognitoWebResponse(currUrl);
+        //next();
+      }
+    },
+    {
+      path: '/logout', component: LogoutSuccess,  beforeEnter(to, from, next){
+        auth.logout();
+        next();
+      }
+
+    },
+    {
+      path: '/error', component: ErrorComponent
+    }
+  ]
+}
+])
+
+function requireAuth(to, from, next) {
+
+  if (!auth.auth.isUserSignedIn()) {
+      UserInfoStore.setLoggedIn(false);
+      next({
+      path: '/login',
+      query: { redirect: to.fullPath }
+      });
+  } else {
+    UserInfoApi.getUserInfo().then(response => {
+      UserInfoStore.setLoggedIn(true);
+      UserInfoStore.setCognitoInfo(response);
+      next();
+    });
+
+  }
+}
 
 function configRoutes () {
   return [
